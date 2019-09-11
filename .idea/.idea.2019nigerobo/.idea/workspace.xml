@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0d77ea3a-fe44-4a7d-975b-816b5d78e94d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Field.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Field.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/CheckPoint.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/CheckPoint.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.2019nigerobo/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.2019nigerobo/.idea/indexLayout.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,18 +15,18 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assets/Script/CheckPoint.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="211">
-              <caret line="25" column="42" lean-forward="true" selection-start-line="25" selection-start-column="42" selection-end-line="25" selection-end-column="42" />
+            <state relative-caret-position="271">
+              <caret line="29" column="10" selection-start-line="29" selection-start-column="10" selection-end-line="29" selection-end-column="10" />
               <folding>
-                <marker date="1568219915517" expanded="false" signature="6:100" ph="..." />
-                <marker date="1568219915517" expanded="true" signature="141:1976" ph="{...}" />
-                <marker date="1568219915517" expanded="true" signature="620:799" ph="{...}" />
-                <marker date="1568219915517" expanded="true" signature="865:1355" ph="{...}" />
-                <marker date="1568219915517" expanded="true" signature="1004:1157" ph="/* for (int i = 0; i &lt; enemies.Length; i++) ... */" />
-                <marker date="1568219915517" expanded="true" signature="1183:1349" ph="{...}" />
-                <marker date="1568219915517" expanded="true" signature="1418:1964" ph="{...}" />
-                <marker date="1568219915517" expanded="true" signature="1720:1817" ph="{...}" />
-                <marker date="1568219915517" expanded="true" signature="1863:1908" ph="{...}" />
+                <marker date="1568221014685" expanded="false" signature="6:100" ph="..." />
+                <marker date="1568221014685" expanded="true" signature="141:1978" ph="{...}" />
+                <marker date="1568221014685" expanded="true" signature="620:799" ph="{...}" />
+                <marker date="1568221014685" expanded="true" signature="865:1357" ph="{...}" />
+                <marker date="1568221014685" expanded="true" signature="908:1159" ph="/* correntTime[gateNum] = TimerScript.time; ... */" />
+                <marker date="1568221014685" expanded="true" signature="1185:1351" ph="{...}" />
+                <marker date="1568221014685" expanded="true" signature="1420:1966" ph="{...}" />
+                <marker date="1568221014685" expanded="true" signature="1722:1819" ph="{...}" />
+                <marker date="1568221014685" expanded="true" signature="1865:1910" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -37,7 +36,7 @@
         <entry file="file://$PROJECT_DIR$/Assets/Script/LoadButtons.cs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="90">
-              <caret line="8" column="55" lean-forward="true" selection-start-line="8" selection-start-column="55" selection-end-line="8" selection-end-column="55" />
+              <caret line="8" column="55" selection-start-line="8" selection-start-column="55" selection-end-line="8" selection-end-column="55" />
               <folding>
                 <marker date="1568218564232" expanded="false" signature="6:78" ph="..." />
                 <marker date="1568218564232" expanded="true" signature="120:551" ph="{...}" />
@@ -161,12 +160,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1568195482564</updated>
-      <workItem from="1568195486446" duration="14124000" />
+      <workItem from="1568195486446" duration="14366000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14124000" />
+    <option name="totallyTimeSpent" value="14366000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -179,7 +178,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="3" y="36" width="1440" height="997" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
@@ -243,7 +241,7 @@
     <entry file="file://$PROJECT_DIR$/Assets/Script/LoadButtons.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
-          <caret line="8" column="55" lean-forward="true" selection-start-line="8" selection-start-column="55" selection-end-line="8" selection-end-column="55" />
+          <caret line="8" column="55" selection-start-line="8" selection-start-column="55" selection-end-line="8" selection-end-column="55" />
           <folding>
             <marker date="1568218564232" expanded="false" signature="6:78" ph="..." />
             <marker date="1568218564232" expanded="true" signature="120:551" ph="{...}" />
@@ -256,18 +254,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Script/CheckPoint.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="211">
-          <caret line="25" column="42" lean-forward="true" selection-start-line="25" selection-start-column="42" selection-end-line="25" selection-end-column="42" />
+        <state relative-caret-position="271">
+          <caret line="29" column="10" selection-start-line="29" selection-start-column="10" selection-end-line="29" selection-end-column="10" />
           <folding>
-            <marker date="1568219915517" expanded="false" signature="6:100" ph="..." />
-            <marker date="1568219915517" expanded="true" signature="141:1976" ph="{...}" />
-            <marker date="1568219915517" expanded="true" signature="620:799" ph="{...}" />
-            <marker date="1568219915517" expanded="true" signature="865:1355" ph="{...}" />
-            <marker date="1568219915517" expanded="true" signature="1004:1157" ph="/* for (int i = 0; i &lt; enemies.Length; i++) ... */" />
-            <marker date="1568219915517" expanded="true" signature="1183:1349" ph="{...}" />
-            <marker date="1568219915517" expanded="true" signature="1418:1964" ph="{...}" />
-            <marker date="1568219915517" expanded="true" signature="1720:1817" ph="{...}" />
-            <marker date="1568219915517" expanded="true" signature="1863:1908" ph="{...}" />
+            <marker date="1568221014685" expanded="false" signature="6:100" ph="..." />
+            <marker date="1568221014685" expanded="true" signature="141:1978" ph="{...}" />
+            <marker date="1568221014685" expanded="true" signature="620:799" ph="{...}" />
+            <marker date="1568221014685" expanded="true" signature="865:1357" ph="{...}" />
+            <marker date="1568221014685" expanded="true" signature="908:1159" ph="/* correntTime[gateNum] = TimerScript.time; ... */" />
+            <marker date="1568221014685" expanded="true" signature="1185:1351" ph="{...}" />
+            <marker date="1568221014685" expanded="true" signature="1420:1966" ph="{...}" />
+            <marker date="1568221014685" expanded="true" signature="1722:1819" ph="{...}" />
+            <marker date="1568221014685" expanded="true" signature="1865:1910" ph="{...}" />
           </folding>
         </state>
       </provider>
