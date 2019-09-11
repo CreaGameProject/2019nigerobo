@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class CheckPoint : MonoBehaviour
 {
-    static public List<float> correntTime { get; set; }=new List<float>();
+    static public List<float> correntTime { get; set; } = new List<float>();
     static private GameObject[] enemies;
     private GameObject[] gate;
     static public int dethCount = 3;
@@ -21,7 +21,8 @@ public class CheckPoint : MonoBehaviour
     //checkPointでのsave
     static public void CPSave(int gateNum)
     {
-        correntTime[gateNum] = TimerScript.time;
+        Debug.Log(gateNum);
+        //correntTime[gateNum] = TimerScript.time;
 //        for (int i = 0; i < enemies.Length; i++)
 //        {
 //            EnemiesPositionData[gateNum].Add(enemies[i].transform.position);

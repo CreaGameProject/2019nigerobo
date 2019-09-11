@@ -18,7 +18,7 @@ public class LoadButtons : MonoBehaviour
         }
     }
 
-    void OnClick(int gateNum)
+    public void OnClick(int gateNum)
     {
         CheckPoint.CPSave(gateNum);
     }

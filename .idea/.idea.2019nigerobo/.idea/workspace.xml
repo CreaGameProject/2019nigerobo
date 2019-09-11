@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0d77ea3a-fe44-4a7d-975b-816b5d78e94d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.2019nigerobo/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.2019nigerobo/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Field.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Field.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Script/CheckPoint.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/CheckPoint.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/LoadButtons.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/LoadButtons.cs" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -12,37 +15,37 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assets/Script/CheckPoint.cs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="181">
-              <caret line="25" column="11" lean-forward="true" selection-start-line="25" selection-start-column="11" selection-end-line="25" selection-end-column="11" />
+              <caret line="24" column="10" selection-start-line="24" selection-start-column="10" selection-end-line="24" selection-end-column="10" />
               <folding>
-                <marker date="1568206356865" expanded="false" signature="6:100" ph="..." />
-                <marker date="1568206356865" expanded="true" signature="141:1652" ph="{...}" />
-                <marker date="1568206356865" expanded="true" signature="536:610" ph="{...}" />
-                <marker date="1568206356865" expanded="true" signature="676:1083" ph="{...}" />
-                <marker date="1568206356865" expanded="true" signature="732:885" ph="/* for (int i = 0; i &lt; enemies.Length; i++) ... */" />
-                <marker date="1568206356865" expanded="true" signature="911:1077" ph="{...}" />
-                <marker date="1568206356865" expanded="true" signature="1146:1640" ph="{...}" />
-                <marker date="1568206356865" expanded="true" signature="1396:1493" ph="{...}" />
-                <marker date="1568206356865" expanded="true" signature="1539:1584" ph="{...}" />
+                <marker date="1568209304792" expanded="false" signature="6:100" ph="..." />
+                <marker date="1568209304792" expanded="true" signature="141:1684" ph="{...}" />
+                <marker date="1568209304792" expanded="true" signature="538:612" ph="{...}" />
+                <marker date="1568209304792" expanded="true" signature="678:1115" ph="{...}" />
+                <marker date="1568209304792" expanded="true" signature="721:917" ph="/* correntTime[gateNum] = TimerScript.time; ... */" />
+                <marker date="1568209304792" expanded="true" signature="943:1109" ph="{...}" />
+                <marker date="1568209304792" expanded="true" signature="1178:1672" ph="{...}" />
+                <marker date="1568209304792" expanded="true" signature="1428:1525" ph="{...}" />
+                <marker date="1568209304792" expanded="true" signature="1571:1616" ph="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Script/LoadButtons.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="16" column="48" lean-forward="true" selection-start-line="16" selection-start-column="48" selection-end-line="16" selection-end-column="48" />
+            <state relative-caret-position="300">
+              <caret line="22" column="35" lean-forward="true" selection-start-line="22" selection-start-column="35" selection-end-line="22" selection-end-column="35" />
               <folding>
-                <marker date="1568206203158" expanded="false" signature="6:78" ph="..." />
-                <marker date="1568206203158" expanded="true" signature="120:585" ph="{...}" />
-                <marker date="1568206203158" expanded="true" signature="295:504" ph="{...}" />
-                <marker date="1568206203158" expanded="true" signature="380:498" ph="{...}" />
-                <marker date="1568206203158" expanded="true" signature="535:583" ph="{...}" />
+                <marker date="1568208849665" expanded="false" signature="6:78" ph="..." />
+                <marker date="1568208849665" expanded="true" signature="120:551" ph="{...}" />
+                <marker date="1568208849665" expanded="true" signature="295:463" ph="{...}" />
+                <marker date="1568208849665" expanded="true" signature="339:457" ph="{...}" />
+                <marker date="1568208849665" expanded="true" signature="501:549" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -160,12 +163,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1568195482564</updated>
-      <workItem from="1568195486446" duration="6119000" />
+      <workItem from="1568195486446" duration="8436000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6119000" />
+    <option name="totallyTimeSpent" value="8436000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -239,34 +242,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Script/CheckPoint.cs">
+    <entry file="file://$PROJECT_DIR$/Assets/Script/LoadButtons.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="181">
-          <caret line="25" column="11" lean-forward="true" selection-start-line="25" selection-start-column="11" selection-end-line="25" selection-end-column="11" />
+        <state relative-caret-position="300">
+          <caret line="22" column="35" lean-forward="true" selection-start-line="22" selection-start-column="35" selection-end-line="22" selection-end-column="35" />
           <folding>
-            <marker date="1568206356865" expanded="false" signature="6:100" ph="..." />
-            <marker date="1568206356865" expanded="true" signature="141:1652" ph="{...}" />
-            <marker date="1568206356865" expanded="true" signature="536:610" ph="{...}" />
-            <marker date="1568206356865" expanded="true" signature="676:1083" ph="{...}" />
-            <marker date="1568206356865" expanded="true" signature="732:885" ph="/* for (int i = 0; i &lt; enemies.Length; i++) ... */" />
-            <marker date="1568206356865" expanded="true" signature="911:1077" ph="{...}" />
-            <marker date="1568206356865" expanded="true" signature="1146:1640" ph="{...}" />
-            <marker date="1568206356865" expanded="true" signature="1396:1493" ph="{...}" />
-            <marker date="1568206356865" expanded="true" signature="1539:1584" ph="{...}" />
+            <marker date="1568208849665" expanded="false" signature="6:78" ph="..." />
+            <marker date="1568208849665" expanded="true" signature="120:551" ph="{...}" />
+            <marker date="1568208849665" expanded="true" signature="295:463" ph="{...}" />
+            <marker date="1568208849665" expanded="true" signature="339:457" ph="{...}" />
+            <marker date="1568208849665" expanded="true" signature="501:549" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Script/LoadButtons.cs">
+    <entry file="file://$PROJECT_DIR$/Assets/Script/CheckPoint.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="16" column="48" lean-forward="true" selection-start-line="16" selection-start-column="48" selection-end-line="16" selection-end-column="48" />
+        <state relative-caret-position="181">
+          <caret line="24" column="10" selection-start-line="24" selection-start-column="10" selection-end-line="24" selection-end-column="10" />
           <folding>
-            <marker date="1568206203158" expanded="false" signature="6:78" ph="..." />
-            <marker date="1568206203158" expanded="true" signature="120:585" ph="{...}" />
-            <marker date="1568206203158" expanded="true" signature="295:504" ph="{...}" />
-            <marker date="1568206203158" expanded="true" signature="380:498" ph="{...}" />
-            <marker date="1568206203158" expanded="true" signature="535:583" ph="{...}" />
+            <marker date="1568209304792" expanded="false" signature="6:100" ph="..." />
+            <marker date="1568209304792" expanded="true" signature="141:1684" ph="{...}" />
+            <marker date="1568209304792" expanded="true" signature="538:612" ph="{...}" />
+            <marker date="1568209304792" expanded="true" signature="678:1115" ph="{...}" />
+            <marker date="1568209304792" expanded="true" signature="721:917" ph="/* correntTime[gateNum] = TimerScript.time; ... */" />
+            <marker date="1568209304792" expanded="true" signature="943:1109" ph="{...}" />
+            <marker date="1568209304792" expanded="true" signature="1178:1672" ph="{...}" />
+            <marker date="1568209304792" expanded="true" signature="1428:1525" ph="{...}" />
+            <marker date="1568209304792" expanded="true" signature="1571:1616" ph="{...}" />
           </folding>
         </state>
       </provider>
