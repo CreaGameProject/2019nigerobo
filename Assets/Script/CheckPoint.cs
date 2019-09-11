@@ -8,26 +8,24 @@ public class CheckPoint : MonoBehaviour
     static public List<float> correntTime { get; set; }=new List<float>();
     static private GameObject[] enemies;
     private GameObject[] gate;
-    static public int dethCount;
-    static public bool isOne;
-    static public bool isTwo;
+    static public int dethCount = 3;
+    static public bool isOne = false;
+    static public bool isTwo = false;
 
     static public List<List<Vector3>> EnemiesPositionData { get; set; } = new List<List<Vector3>>();
     //getcomp
     void start()
     {
         enemies = GameObject.FindGameObjectsWithTag("Enemy");
-        isOne = false;
-        isTwo = false;
-        dethCount = 3;
     }
     //checkPointでのsave
     static public void CPSave(int gateNum)
     {
-        //correntTime[gateNum] = TimerScript.time;
+        Debug.Log("test");
+        correntTime[gateNum] = TimerScript.time;
         for (int i = 0; i < enemies.Length; i++)
         {
-            EnemiesPositionData[gateNum].Add(enemies[i].transform.position);
+            //EnemiesPositionData[gateNum].Add(enemies[i].transform.position);
         }
     }
     
@@ -39,10 +37,10 @@ public class CheckPoint : MonoBehaviour
         black_out = GameObject.Find("Black").GetComponent<Image>();
         black_out.color = new Color(0, 0, 0, 256);
 
-        //TimerScript.time = correntTime[gateNum];
+        TimerScript.time = correntTime[gateNum];
         for (int i = 0; i < enemies.Length; i++)
         {
-            enemies[i].transform.position = EnemiesPositionData[gateNum][i];
+            //enemies[i].transform.position = EnemiesPositionData[gateNum][i];
         }
 
         dethCount--;

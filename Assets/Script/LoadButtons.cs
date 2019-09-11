@@ -11,6 +11,7 @@ public class LoadButtons : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Debug.Log(CheckPoint.dethCount);
         if (CheckPoint.dethCount > 0)
         {
             button1.SetActive(CheckPoint.isOne);
