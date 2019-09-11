@@ -24,8 +24,7 @@ public class CheckPoint : MonoBehaviour
     //checkPointでのsave
     static public void CPSave(int gateNum)
     {
-        Debug.Log(enemies.Length);
-        correntTime[gateNum] = TimerScript.time;
+        //correntTime[gateNum] = TimerScript.time;
         for (int i = 0; i < enemies.Length; i++)
         {
             EnemiesPositionData[gateNum].Add(enemies[i].transform.position);
@@ -40,7 +39,7 @@ public class CheckPoint : MonoBehaviour
         black_out = GameObject.Find("Black").GetComponent<Image>();
         black_out.color = new Color(0, 0, 0, 256);
 
-        TimerScript.time = correntTime[gateNum];
+        //TimerScript.time = correntTime[gateNum];
         for (int i = 0; i < enemies.Length; i++)
         {
             enemies[i].transform.position = EnemiesPositionData[gateNum][i];
