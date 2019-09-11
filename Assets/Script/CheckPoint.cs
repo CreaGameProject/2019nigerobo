@@ -7,6 +7,8 @@ public class CheckPoint : MonoBehaviour
 {
     static public List<float> correntTime { get; set; } = new List<float>();
     static private GameObject[] enemies;
+    static private GameObject robot;
+    static private Vector3 friendlyposition;
     private GameObject[] gate;
     static public int dethCount = 3;
     static public bool isOne = false;
@@ -17,12 +19,15 @@ public class CheckPoint : MonoBehaviour
     void start()
     {
         enemies = GameObject.FindGameObjectsWithTag("Enemy");
+        robot = GameObject.FindGameObjectWithTag("Player");
+        Debug.Log(robot.transform.position);
     }
     //checkPointでのsave
     static public void CPSave(int gateNum)
     {
         Debug.Log(gateNum);
         //correntTime[gateNum] = TimerScript.time;
+        //friendlyposition = robot.transform.position;
 //        for (int i = 0; i < enemies.Length; i++)
 //        {
 //            EnemiesPositionData[gateNum].Add(enemies[i].transform.position);
@@ -43,7 +48,7 @@ public class CheckPoint : MonoBehaviour
     static public void CPLoad(int gateNum)
     {
         Image black_out;
-
+        robot.transform.position = friendlyposition;
         black_out = GameObject.Find("Black").GetComponent<Image>();
         black_out.color = new Color(0, 0, 0, 256);
 
