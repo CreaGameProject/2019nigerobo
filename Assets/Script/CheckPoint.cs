@@ -21,11 +21,20 @@ public class CheckPoint : MonoBehaviour
     //checkPointでのsave
     static public void CPSave(int gateNum)
     {
-        Debug.Log("test");
         correntTime[gateNum] = TimerScript.time;
-        for (int i = 0; i < enemies.Length; i++)
+//        for (int i = 0; i < enemies.Length; i++)
+//        {
+//            EnemiesPositionData[gateNum].Add(enemies[i].transform.position);
+//        }
+
+        switch (gateNum)
         {
-            //EnemiesPositionData[gateNum].Add(enemies[i].transform.position);
+            case 0:
+                isOne = true;
+                break;
+            case 1:
+                isTwo = true;
+                break;
         }
     }
     
@@ -40,7 +49,7 @@ public class CheckPoint : MonoBehaviour
         TimerScript.time = correntTime[gateNum];
         for (int i = 0; i < enemies.Length; i++)
         {
-            //enemies[i].transform.position = EnemiesPositionData[gateNum][i];
+            enemies[i].transform.position = EnemiesPositionData[gateNum][i];
         }
 
         dethCount--;
