@@ -1,15 +1,18 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Animations;
 using UnityEngine;
 using UnityEngine.Serialization;
 
 public class EnemyRobot : MonoBehaviour
 {
     [SerializeField] private Vector2Int moveRangeRadius;
-    [SerializeField] private int visionRange;
     [SerializeField] private float walkTime;
     [SerializeField] private float runTime; 
     private Transform playerTransform;
+    private Animator animator;
+    private Warning warning;
+    private MoveSceneScript moveSceneScript;
 
     /// <summary> マップの範囲 </summary>
     [SerializeField] private Vector2Int mapRange;
@@ -74,12 +77,18 @@ public class EnemyRobot : MonoBehaviour
     // maps
     /// <summary> 通行可能座標インデックスがtrue </summary>
     private bool[,] _passableMap;
-    
+
+    private static readonly int Stalking = Animator.StringToHash("Stalking");
+    private static readonly int Attack = Animator.StringToHash("Attack");
+
     // Start is called before the first frame update
     void Start()
     {
+        Debug.Log("argrg");
         _influenceMap = new InfluenceMap(mapRange.x, mapRange.y);
         CSVReader csvreader = GameObject.FindWithTag("MainCamera").GetComponent<CSVReader>();
+        moveSceneScript = GameObject.FindWithTag("MainCamera").GetComponent<MoveSceneScript>();
+        warning = GameObject.FindWithTag("MainCamera").GetComponent<Warning>();
         playerTransform = GameObject.FindWithTag("Player").GetComponent<Transform>();
         _passableMap = csvreader.LoadMap(mapRange);
         _initialPosition = EnemyPosition;
@@ -89,7 +98,16 @@ public class EnemyRobot : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (EnemyPosition == PlayerPosition)
+        {
+            animator.SetBool(Attack, true);
+            GameOver();
+        }
+    }
+
+    private void GameOver()
+    {
+        moveSceneScript.MoveGameOver();
     }
 
     /// <summary> 各ステートの管理 </summary>
@@ -97,12 +115,15 @@ public class EnemyRobot : MonoBehaviour
     {
         while (true)
         {
-            // 巡回する
+            // 巡回する プレイヤーを見つけるまで
             Debug.Log("Patrol Phase");
-            // プレイヤーを見つけるまで
+            animator.SetBool(Stalking, false);
+            warning.Warn();
             yield return RandomWalk();
+
             // プレイヤーを追いかける
             Debug.Log("Chase Phase");
+            animator.SetBool(Stalking, true);
             yield return ChasePlayer();
         }
     }
@@ -175,6 +196,25 @@ public class EnemyRobot : MonoBehaviour
             transform.position = Vector3.Lerp(start, end, tim);
             yield return null;
         }
+    }
+
+    /// <summary> 動く方向に向き変えるやつ </summary>
+    private void ChangeRotate(Vector2Int direction)
+    {
+        if (direction.x > 0)
+        {
+            
+        } else if (direction.x < 0)
+        {
+            
+        } else if (direction.y > 0)
+        {
+            
+        } else if (direction.y < 0)
+        {
+            
+        }
+        
     }
 
     /// <summary> ランダムウォークの目的地設定 </summary>

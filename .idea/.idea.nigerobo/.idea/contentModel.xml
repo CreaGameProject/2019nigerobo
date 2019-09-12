@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\Lycolet\.Rider2019.2\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\Lycolet\.Rider2019.2\system\resharper-host\local\Transient\ReSharperHost\v192\SolutionCaches\_nigerobo.1595477633.00" t="ExcludeRecursive" />
+    <e p="Z:\ProjectData\GitHub\nigerobo\nigerobo" t="IncludeRecursive">
+      <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets" t="Include">
+        <e p="MasterCube" t="Include">
+          <e p="Editor" t="Include">
+            <e p="CombineMeshEditor.cs" t="Include" />
+            <e p="MasterCubeEditor.cs" t="Include" />
+          </e>
+          <e p="license.txt" t="Include" />
+          <e p="README.txt" t="Include" />
+          <e p="Script" t="Include">
+            <e p="MasterCube.cs" t="Include" />
+          </e>
+        </e>
+        <e p="Script" t="Include">
+          <e p="BGMScript.cs" t="Include" />
+          <e p="CameraManagement.cs" t="Include" />
+          <e p="CheckPoint.cs" t="Include" />
+          <e p="CheckPointManager.cs" t="Include" />
+          <e p="CSVReader.cs" t="Include" />
+          <e p="EnemyRobot.cs" t="Include" />
+          <e p="Gate.cs" t="Include" />
+          <e p="InfluenceMap.cs" t="Include" />
+          <e p="LoadButtons.cs" t="Include" />
+          <e p="MoveSceneScript.cs" t="Include" />
+          <e p="PlayerMove.cs" t="Include" />
+          <e p="readerCsv.cs" t="Include" />
+          <e p="TimerScript.cs" t="Include" />
+          <e p="Title.cs" t="Include" />
+          <e p="wall.cs" t="Include" />
+          <e p="Warning.cs" t="Include" />
+        </e>
+      </e>
+      <e p="nigerobo.sln" t="IncludeFlat" />
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="Packages" t="ExcludeRecursive" />
+      <e p="Temp\bin" t="ExcludeRecursive" />
+    </e>
+  </component>
+</project>
