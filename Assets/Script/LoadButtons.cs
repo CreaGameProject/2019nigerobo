@@ -15,11 +15,15 @@ public class LoadButtons : MonoBehaviour
         {
             button1.SetActive(CheckPoint.isOne);
             button2.SetActive(CheckPoint.isTwo);
+        }else if (CheckPoint.dethCount<=0)
+        {
+            button1.SetActive(false);
+            button2.SetActive(false);
         }
     }
 
     public void OnClick(int gateNum)
     {
-        CheckPoint.CPSave(gateNum);
+        CheckPoint.CPLoad(gateNum);
     }
 }
