@@ -8,7 +8,8 @@ public class EnemyRobot : MonoBehaviour
 {
     [SerializeField] private Vector2Int moveRangeRadius;
     [SerializeField] private float walkTime;
-    [SerializeField] private float runTime; 
+    [SerializeField] private float runTime;
+    [SerializeField] private float curveTime;
     private Transform playerTransform;
     private Animator animator;
     private Warning warning;
@@ -78,8 +79,8 @@ public class EnemyRobot : MonoBehaviour
     /// <summary> 通行可能座標インデックスがtrue </summary>
     private bool[,] _passableMap;
 
-    private static readonly int Stalking = Animator.StringToHash("Stalking");
     private static readonly int Attack = Animator.StringToHash("Attack");
+    private static readonly int Stalking = Animator.StringToHash("Stalking");
 
     // Start is called before the first frame update
     void Start()
@@ -87,6 +88,7 @@ public class EnemyRobot : MonoBehaviour
         Debug.Log("argrg");
         _influenceMap = new InfluenceMap(mapRange.x, mapRange.y);
         CSVReader csvreader = GameObject.FindWithTag("MainCamera").GetComponent<CSVReader>();
+        animator = GetComponent<Animator>();
         moveSceneScript = GameObject.FindWithTag("MainCamera").GetComponent<MoveSceneScript>();
         warning = GameObject.FindWithTag("MainCamera").GetComponent<Warning>();
         playerTransform = GameObject.FindWithTag("Player").GetComponent<Transform>();
@@ -118,12 +120,12 @@ public class EnemyRobot : MonoBehaviour
             // 巡回する プレイヤーを見つけるまで
             Debug.Log("Patrol Phase");
             animator.SetBool(Stalking, false);
-            warning.Warn();
             yield return RandomWalk();
 
             // プレイヤーを追いかける
             Debug.Log("Chase Phase");
             animator.SetBool(Stalking, true);
+            warning.Warn();
             yield return ChasePlayer();
         }
     }
@@ -187,6 +189,7 @@ public class EnemyRobot : MonoBehaviour
     /// <param name="moveTime">一マス移動にかかる秒数。</param>
     private IEnumerator Move(Vector2Int direction, float moveTime)
     {
+        ChangeRotate(direction);
         float tim = 0;
         Vector3 start = transform.position;
         Vector3 end = transform.position + edgeLength * new Vector3(direction.x, 0, direction.y);
@@ -203,16 +206,16 @@ public class EnemyRobot : MonoBehaviour
     {
         if (direction.x > 0)
         {
-            
+            transform.rotation = Quaternion.Euler(0,0,0);
         } else if (direction.x < 0)
         {
-            
+            transform.rotation = Quaternion.Euler(0,180,0);
         } else if (direction.y > 0)
         {
-            
+            transform.rotation = Quaternion.Euler(0,270,0);
         } else if (direction.y < 0)
         {
-            
+            transform.rotation = Quaternion.Euler(0,90,0);
         }
         
     }
