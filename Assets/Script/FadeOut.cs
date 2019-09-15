@@ -41,9 +41,9 @@ public class FadeOut : MonoBehaviour
 
     private void Update()
     {
+        Debug.Log(fadeSpeed);
         if (flag)
         {
-            Debug.Log(fadeSpeed);
             _fadeImage.color = new Color(_fadeImage.color.r,_fadeImage.color.g,_fadeImage.color.b,i);
             i += fadeSpeed;
             if (i >= 1 && i <= 0) flag = false;
