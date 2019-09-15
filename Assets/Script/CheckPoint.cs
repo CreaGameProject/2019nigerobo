@@ -50,26 +50,22 @@ public class CheckPoint : MonoBehaviour
     //任意点でのロード
     static public void CPLoad(int gateNum)
     {
-        Debug.Log(dethCount);
-        Image black_out;
+        Debug.Log("deth counter" + dethCount);
+        FadeOut.Fade();
         //robot.transform.position = friendlyposition;
         robot.transform.position=new Vector3(0,0,0);
-        black_out = GameObject.Find("Black").GetComponent<Image>();
-        black_out.color = new Color(0, 0, 0, 256);
-
+        Debug.Log(robot.transform.position);
         TimerScript.time = correntTime[gateNum];
 //        for (int i = 0; i < enemies.Length; i++)
 //        {
 //            enemies[i].transform.position = EnemiesPositionData[gateNum][i];
 //        }
-
         dethCount--;
         if (gateNum==1)
         {
             isTwo=false;
         }
-
-        black_out.color = new Color(0, 0, 0, 0);
+        FadeOut.FadeIn();
     }
     
     
