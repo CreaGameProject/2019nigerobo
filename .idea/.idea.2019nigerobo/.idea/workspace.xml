@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0d77ea3a-fe44-4a7d-975b-816b5d78e94d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.2019nigerobo/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.2019nigerobo/.idea/indexLayout.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.2019nigerobo/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.2019nigerobo/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/CheckPoint.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/CheckPoint.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/LoadButtons.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/LoadButtons.cs" afterDir="false" />
-    </list>
+    <list default="true" id="0d77ea3a-fe44-4a7d-975b-816b5d78e94d" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,27 +10,27 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assets/Script/CheckPoint.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="436">
-              <caret line="58" column="36" lean-forward="true" selection-start-line="58" selection-start-column="36" selection-end-line="58" selection-end-column="36" />
+            <state relative-caret-position="585">
+              <caret line="55" column="52" selection-start-line="55" selection-start-column="52" selection-end-line="55" selection-end-column="52" />
               <folding>
-                <marker date="1568472925916" expanded="false" signature="6:100" ph="..." />
-                <marker date="1568472925916" expanded="true" signature="141:2078" ph="{...}" />
-                <marker date="1568472925916" expanded="true" signature="636:856" ph="{...}" />
-                <marker date="1568472925916" expanded="true" signature="922:1419" ph="{...}" />
-                <marker date="1568472925916" expanded="true" signature="1068:1221" ph="/* for (int i = 0; i &lt; enemies.Length; i++) ... */" />
-                <marker date="1568472925916" expanded="true" signature="1247:1413" ph="{...}" />
-                <marker date="1568472925916" expanded="true" signature="1482:2066" ph="{...}" />
-                <marker date="1568472925916" expanded="true" signature="1766:1919" ph="/* for (int i = 0; i &lt; enemies.Length; i++) ... */" />
-                <marker date="1568472925916" expanded="true" signature="1965:2010" ph="{...}" />
+                <marker date="1568473201931" expanded="false" signature="6:100" ph="..." />
+                <marker date="1568473201931" expanded="true" signature="141:2132" ph="{...}" />
+                <marker date="1568473201931" expanded="true" signature="635:855" ph="{...}" />
+                <marker date="1568473201931" expanded="true" signature="921:1418" ph="{...}" />
+                <marker date="1568473201931" expanded="true" signature="1067:1220" ph="/* for (int i = 0; i &lt; enemies.Length; i++) ... */" />
+                <marker date="1568473201931" expanded="true" signature="1246:1412" ph="{...}" />
+                <marker date="1568473201931" expanded="true" signature="1481:2120" ph="{...}" />
+                <marker date="1568473201931" expanded="true" signature="1820:1973" ph="/* for (int i = 0; i &lt; enemies.Length; i++) ... */" />
+                <marker date="1568473201931" expanded="true" signature="2019:2064" ph="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Script/LoadButtons.cs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="270">
@@ -101,8 +96,8 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Assets/Script/Gate.cs" />
-        <option value="$PROJECT_DIR$/Assets/Script/CheckPoint.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/LoadButtons.cs" />
+        <option value="$PROJECT_DIR$/Assets/Script/CheckPoint.cs" />
       </list>
     </option>
   </component>
@@ -182,12 +177,12 @@
       <option name="presentableId" value="Default" />
       <updated>1568195482564</updated>
       <workItem from="1568195486446" duration="14366000" />
-      <workItem from="1568466725218" duration="5950000" />
+      <workItem from="1568466725218" duration="6655000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20316000" />
+    <option name="totallyTimeSpent" value="21021000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -200,7 +195,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="436" y="0" width="1305" height="997" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1317269" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -276,24 +270,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Script/CheckPoint.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="436">
-          <caret line="58" column="36" lean-forward="true" selection-start-line="58" selection-start-column="36" selection-end-line="58" selection-end-column="36" />
-          <folding>
-            <marker date="1568472925916" expanded="false" signature="6:100" ph="..." />
-            <marker date="1568472925916" expanded="true" signature="141:2078" ph="{...}" />
-            <marker date="1568472925916" expanded="true" signature="636:856" ph="{...}" />
-            <marker date="1568472925916" expanded="true" signature="922:1419" ph="{...}" />
-            <marker date="1568472925916" expanded="true" signature="1068:1221" ph="/* for (int i = 0; i &lt; enemies.Length; i++) ... */" />
-            <marker date="1568472925916" expanded="true" signature="1247:1413" ph="{...}" />
-            <marker date="1568472925916" expanded="true" signature="1482:2066" ph="{...}" />
-            <marker date="1568472925916" expanded="true" signature="1766:1919" ph="/* for (int i = 0; i &lt; enemies.Length; i++) ... */" />
-            <marker date="1568472925916" expanded="true" signature="1965:2010" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Script/LoadButtons.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
@@ -305,6 +281,24 @@
             <marker date="1568473011470" expanded="true" signature="339:457" ph="{...}" />
             <marker date="1568473011470" expanded="true" signature="490:586" ph="{...}" />
             <marker date="1568473011470" expanded="true" signature="630:678" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Script/CheckPoint.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="585">
+          <caret line="55" column="52" selection-start-line="55" selection-start-column="52" selection-end-line="55" selection-end-column="52" />
+          <folding>
+            <marker date="1568473201931" expanded="false" signature="6:100" ph="..." />
+            <marker date="1568473201931" expanded="true" signature="141:2132" ph="{...}" />
+            <marker date="1568473201931" expanded="true" signature="635:855" ph="{...}" />
+            <marker date="1568473201931" expanded="true" signature="921:1418" ph="{...}" />
+            <marker date="1568473201931" expanded="true" signature="1067:1220" ph="/* for (int i = 0; i &lt; enemies.Length; i++) ... */" />
+            <marker date="1568473201931" expanded="true" signature="1246:1412" ph="{...}" />
+            <marker date="1568473201931" expanded="true" signature="1481:2120" ph="{...}" />
+            <marker date="1568473201931" expanded="true" signature="1820:1973" ph="/* for (int i = 0; i &lt; enemies.Length; i++) ... */" />
+            <marker date="1568473201931" expanded="true" signature="2019:2064" ph="{...}" />
           </folding>
         </state>
       </provider>
