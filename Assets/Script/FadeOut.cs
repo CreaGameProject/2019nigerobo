@@ -19,10 +19,7 @@ public class FadeOut : MonoBehaviour
     {
         _fadeImage = GetComponent<Image>();
         _alfa = _fadeImage.color.a;
-        _alfa = 200;
-        
     }
-
     static public void Fade()
     {
         Debug.Log("fade start alfa:" + _alfa);
@@ -39,8 +36,9 @@ public class FadeOut : MonoBehaviour
         _fadeImage.color = new Color(_fadeImage.color.r,_fadeImage.color.g,_fadeImage.color.b,0f);
     }
 
-    private void Update()
+    void Update()
     {
+        Debug.Log(fadeSpeed);
         if (flag)
         {
             Debug.Log(fadeSpeed);
