@@ -26,23 +26,16 @@ public class FadeOut : MonoBehaviour
     static public void Fade()
     {
         Debug.Log("fade start alfa:" + _alfa);
-        _fadeImage.enabled = true;
-        while (i<1)
-        {
-            flag = true;
-            fadeSpeed = Math.Abs(fadeSpeed);
-        }
+        fadeSpeed = Math.Abs(fadeSpeed);
+        flag = true;
         _fadeImage.color = new Color(_fadeImage.color.r,_fadeImage.color.g,_fadeImage.color.b,1f);
     }
 
     static public void FadeIn()
     {
+        flag = false;
         _fadeImage.enabled = true;
-        while (i>0)
-        {
-            flag = false;
-            fadeSpeed = -1 * Math.Abs(fadeSpeed);
-        }
+        fadeSpeed = -1 * Math.Abs(fadeSpeed);
         _fadeImage.color = new Color(_fadeImage.color.r,_fadeImage.color.g,_fadeImage.color.b,0f);
     }
 
@@ -50,8 +43,10 @@ public class FadeOut : MonoBehaviour
     {
         if (flag)
         {
+            Debug.Log(fadeSpeed);
             _fadeImage.color = new Color(_fadeImage.color.r,_fadeImage.color.g,_fadeImage.color.b,i);
             i += fadeSpeed;
+            if (i >= 1 && i <= 0) flag = false;
         }
     }
 }

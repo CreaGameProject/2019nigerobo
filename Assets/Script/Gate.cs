@@ -11,6 +11,7 @@ public class Gate : MonoBehaviour
     private bool through = false;
     [SerializeField]
     int gate_num = 0;
+    CheckPoint checkPoint = new CheckPoint();
 
     // Start is called before the first frame update
     void Start()
@@ -30,7 +31,7 @@ public class Gate : MonoBehaviour
         if(Vector3.Distance(Player.transform.position, transform.position) < 0.5f && !through) //プレイヤーとゲートの距離が0.5以下でかつ、一度もそのゲートを通っていないとき
         {
             through = true; //すでにゲートを通ったことにする
-            CheckPoint.CPSave(gate_num); //CPSaveにゲート番号を渡す
+            checkPoint.CPSave(gate_num); //CPSaveにゲート番号を渡す
         }
     }
 }

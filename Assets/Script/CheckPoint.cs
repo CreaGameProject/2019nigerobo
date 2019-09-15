@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -21,15 +22,14 @@ public class CheckPoint : MonoBehaviour
     {
         Debug.Log("1");
         //enemies = GameObject.FindGameObjectsWithTag("Enemy");
-        robot = GameObject.FindGameObjectWithTag("Player");
         correntTime[0] = 300;
         correntTime[1] = 300;
     }
     //checkPointでのsave
-    static public void CPSave(int gateNum)
+    public void CPSave(int gateNum)
     {
         correntTime[gateNum] = TimerScript.time;
-        friendlyposition = robot.transform.position;
+        friendlyposition = this.transform.position;
         Debug.Log(friendlyposition);
 //        for (int i = 0; i < enemies.Length; i++)
 //        {
@@ -48,12 +48,11 @@ public class CheckPoint : MonoBehaviour
     }
     
     //任意点でのロード
-    static public void CPLoad(int gateNum)
+    public void CPLoad(int gateNum)
     {
         Debug.Log("deth counter" + dethCount);
         FadeOut.Fade();
-        //robot.transform.position = friendlyposition;
-        robot.transform.position=new Vector3(0,0,0);
+        this.transform.position = friendlyposition;
         Debug.Log(robot.transform.position);
         TimerScript.time = correntTime[gateNum];
 //        for (int i = 0; i < enemies.Length; i++)

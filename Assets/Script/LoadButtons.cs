@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -7,6 +8,7 @@ public class LoadButtons : MonoBehaviour
     
     // Start is called before the first frame update
     [SerializeField] private GameObject button1,button2;
+    CheckPoint checkPoint = new CheckPoint();
 
     // Update is called once per frame
     void Update()
@@ -24,6 +26,6 @@ public class LoadButtons : MonoBehaviour
 
     public void OnClick(int gateNum)
     {
-        CheckPoint.CPLoad(gateNum);
+        checkPoint.CPLoad(gateNum);
     }
 }
