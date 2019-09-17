@@ -22,7 +22,7 @@ public class CheckPoint : MonoBehaviour
     void Start()
     {
         Debug.Log("1");
-        //enemies = GameObject.FindGameObjectsWithTag("Enemy");
+        enemies = GameObject.Find("enemy_jam_master");
         correntTime[0] = 300;
         correntTime[1] = 300;
     }
@@ -33,10 +33,10 @@ public class CheckPoint : MonoBehaviour
         friendlyposition = transform.position;
 
         Debug.Log(friendlyposition);
-//        for (int i = 0; i < enemies.Length; i++)
-//        {
-//            EnemiesPositionData[gateNum].Add(enemies[i].transform.position); 
-//        }
+        for (int i = 0; i < enemies.Length; i++)
+        {
+            EnemiesPositionData[gateNum].Add(enemies[i].transform.position); 
+        }
 
         switch (gateNum)
         {
@@ -57,24 +57,19 @@ public class CheckPoint : MonoBehaviour
         Image black_out;
         black_out = GameObject.Find("Black").GetComponent<Image>();
         black_out.color = new Color(0, 0, 0, 256);
-//        yield return new WaitForFixedUpdate();
-//        transform.position = friendlyposition;
         transform.GetComponent<PlayerMove>().controller.enabled = false;
         transform.position = friendlyposition;
         transform.GetComponent<PlayerMove>().controller.enabled = true;
-//        GetComponent<CharacterController>().center = friendlyposition;
-        //StartCoroutine(WaitUpdate());
         TimerScript.time = correntTime[gateNum];
-//        for (int i = 0; i < enemies.Length; i++)
-//        {
-//            enemies[i].transform.position = EnemiesPositionData[gateNum][i];
-//        }
+        for (int i = 0; i < enemies.Length; i++)
+        {
+            enemies[i].transform.position = EnemiesPositionData[gateNum][i];
+        }
         dethCount--;
         if (gateNum==1)
         {
             isTwo=false;
         }
-        //FadeOut.FadeIn();
         black_out.color = new Color(0, 0, 0, 0);
     }
     
