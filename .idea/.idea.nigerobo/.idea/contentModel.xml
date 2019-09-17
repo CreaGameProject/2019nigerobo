@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\itsuki omori\.Rider2019.1\config\scratches" t="IncludeRecursive" />
-    <e p="C:\Users\itsuki omori\.Rider2019.1\system\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\itsuki omori\.Rider2019.1\system\resharper-host\local\Transient\ReSharperHost\v191\SolutionCaches\_2019nigerobo.-1438232881.00" t="ExcludeRecursive" />
-    <e p="C:\Users\itsuki omori\Downloads\marble\marble\2019nigerobo" t="IncludeRecursive">
-      <e p="2019nigerobo.sln" t="IncludeFlat" />
+    <e p="C:\Users\Lycolet\.Rider2019.2\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\Lycolet\.Rider2019.2\system\resharper-host\local\Transient\ReSharperHost\v192\SolutionCaches\_nigerobo.1595477633.00" t="ExcludeRecursive" />
+    <e p="Z:\ProjectData\GitHub\nigerobo\nigerobo" t="IncludeRecursive">
       <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
@@ -39,6 +37,7 @@
           <e p="Warning.cs" t="Include" />
         </e>
       </e>
+      <e p="nigerobo.sln" t="IncludeFlat" />
       <e p="obj" t="ExcludeRecursive" />
       <e p="Packages" t="ExcludeRecursive" />
       <e p="Temp\bin" t="ExcludeRecursive" />

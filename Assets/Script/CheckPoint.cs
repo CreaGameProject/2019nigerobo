@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnityEngine;
@@ -6,17 +7,17 @@ using UnityEngine.UI;
 
 public class CheckPoint : MonoBehaviour
 {
-    static public float[] correntTime=new float[2];
-    static private GameObject[] enemies;
-    static public GameObject robot;
-    static private Vector3 friendlyposition;
-    static private GameObject[] gatePos;
+    public static float[] correntTime=new float[2];
+    private static GameObject[] enemies;
+    public static GameObject robot;
+    private static Vector3 friendlyposition;
+    private static GameObject[] gatePos;
     private GameObject[] gate;
-    static public int dethCount = 3;
-    static public bool isOne = false;
-    static public bool isTwo = false;
+    public static int dethCount = 3;
+    public static bool isOne = false;
+    public static bool isTwo = false;
 
-    static public List<List<Vector3>> EnemiesPositionData { get; set; } = new List<List<Vector3>>();
+    public static List<List<Vector3>> EnemiesPositionData { get; set; } = new List<List<Vector3>>();
     //getcomp
     void Start()
     {
@@ -29,11 +30,12 @@ public class CheckPoint : MonoBehaviour
     public void CPSave(int gateNum)
     {
         correntTime[gateNum] = TimerScript.time;
-        friendlyposition = this.transform.position;
+        friendlyposition = transform.position;
+
         Debug.Log(friendlyposition);
 //        for (int i = 0; i < enemies.Length; i++)
 //        {
-//            EnemiesPositionData[gateNum].Add(enemies[i].transform.position);
+//            EnemiesPositionData[gateNum].Add(enemies[i].transform.position); 
 //        }
 
         switch (gateNum)
@@ -50,10 +52,18 @@ public class CheckPoint : MonoBehaviour
     //任意点でのロード
     public void CPLoad(int gateNum)
     {
-        Debug.Log("deth counter" + dethCount);
-        FadeOut.Fade();
-        this.transform.position = friendlyposition;
-        Debug.Log(robot.transform.position);
+        Debug.Log("deth counter" + dethCount + friendlyposition);
+        //FadeOut.Fade();
+        Image black_out;
+        black_out = GameObject.Find("Black").GetComponent<Image>();
+        black_out.color = new Color(0, 0, 0, 256);
+//        yield return new WaitForFixedUpdate();
+//        transform.position = friendlyposition;
+        transform.GetComponent<PlayerMove>().controller.enabled = false;
+        transform.position = friendlyposition;
+        transform.GetComponent<PlayerMove>().controller.enabled = true;
+//        GetComponent<CharacterController>().center = friendlyposition;
+        //StartCoroutine(WaitUpdate());
         TimerScript.time = correntTime[gateNum];
 //        for (int i = 0; i < enemies.Length; i++)
 //        {
@@ -64,7 +74,8 @@ public class CheckPoint : MonoBehaviour
         {
             isTwo=false;
         }
-        FadeOut.FadeIn();
+        //FadeOut.FadeIn();
+        black_out.color = new Color(0, 0, 0, 0);
     }
     
     

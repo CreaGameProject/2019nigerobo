@@ -7,7 +7,7 @@ public class PlayerMove : MonoBehaviour
     [SerializeField]private float movespeed = 3;
     float moveX, moveZ;
 
-    CharacterController controller;
+    public CharacterController controller;
 
     private Animator animator;
 

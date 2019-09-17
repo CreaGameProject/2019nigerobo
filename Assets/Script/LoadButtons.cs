@@ -8,9 +8,20 @@ public class LoadButtons : MonoBehaviour
     
     // Start is called before the first frame update
     [SerializeField] private GameObject button1,button2;
-    CheckPoint checkPoint = new CheckPoint();
+    CheckPoint checkPoint;
+    
+   
+    
 
     // Update is called once per frame
+    
+    //追加9/17
+    private void Start()
+    {
+        checkPoint = GameObject.FindGameObjectWithTag("Player").GetComponent<CheckPoint>();
+    }
+
+
     void Update()
     {
         if (CheckPoint.dethCount > 0)
