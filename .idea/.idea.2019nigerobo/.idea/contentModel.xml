@@ -27,7 +27,6 @@
           <e p="CheckPointManager.cs" t="Include" />
           <e p="CSVReader.cs" t="Include" />
           <e p="EnemyRobot.cs" t="Include" />
-          <e p="FadeOut.cs" t="Include" />
           <e p="Gate.cs" t="Include" />
           <e p="InfluenceMap.cs" t="Include" />
           <e p="LoadButtons.cs" t="Include" />

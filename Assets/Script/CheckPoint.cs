@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnityEngine;
@@ -9,7 +10,7 @@ public class CheckPoint : MonoBehaviour
     public static float[] correntTime=new float[2];
     private static GameObject[] enemies;
     public static GameObject robot;
-    private /*static*/ Vector3 friendlyposition;
+    private static Vector3 friendlyposition;
     private static GameObject[] gatePos;
     private GameObject[] gate;
     public static int dethCount = 3;
@@ -34,7 +35,7 @@ public class CheckPoint : MonoBehaviour
         Debug.Log(friendlyposition);
 //        for (int i = 0; i < enemies.Length; i++)
 //        {
-//            EnemiesPositionData[gateNum].Add(enemies[i].transform.position);
+//            EnemiesPositionData[gateNum].Add(enemies[i].transform.position); 
 //        }
 
         switch (gateNum)
@@ -51,12 +52,18 @@ public class CheckPoint : MonoBehaviour
     //任意点でのロード
     public void CPLoad(int gateNum)
     {
-        Debug.Log("deth counter" + dethCount);
+        Debug.Log("deth counter" + dethCount + friendlyposition);
         //FadeOut.Fade();
+        Image black_out;
         black_out = GameObject.Find("Black").GetComponent<Image>();
         black_out.color = new Color(0, 0, 0, 256);
-        this.transform.position = friendlyposition;
-        Debug.Log(robot.transform.position);
+//        yield return new WaitForFixedUpdate();
+//        transform.position = friendlyposition;
+        transform.GetComponent<PlayerMove>().controller.enabled = false;
+        transform.position = friendlyposition;
+        transform.GetComponent<PlayerMove>().controller.enabled = true;
+//        GetComponent<CharacterController>().center = friendlyposition;
+        //StartCoroutine(WaitUpdate());
         TimerScript.time = correntTime[gateNum];
 //        for (int i = 0; i < enemies.Length; i++)
 //        {
@@ -70,4 +77,6 @@ public class CheckPoint : MonoBehaviour
         //FadeOut.FadeIn();
         black_out.color = new Color(0, 0, 0, 0);
     }
+    
+    
 }
