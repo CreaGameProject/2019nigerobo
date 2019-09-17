@@ -730,7 +730,7 @@ GameObject:
   - component: {fileID: 7194376846776533384}
   m_Layer: 0
   m_Name: enemy_jam_master
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -22,7 +22,7 @@ public class CheckPoint : MonoBehaviour
     void Start()
     {
         Debug.Log("1");
-        enemies = GameObject.Find("enemy_jam_master");
+        enemies = GameObject.FindGameObjectsWithTag("Enemy");
         correntTime[0] = 300;
         correntTime[1] = 300;
     }

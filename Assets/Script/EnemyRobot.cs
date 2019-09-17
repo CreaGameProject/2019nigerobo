@@ -95,6 +95,7 @@ public class EnemyRobot : MonoBehaviour
         _passableMap = csvreader.LoadMap(mapRange);
         _initialPosition = EnemyPosition;
         StartCoroutine(StateManage());
+        BGMScript bgmScript = GameObject.Find("MainCamera").GetComponent<BGMScript>();
     }
 
     // Update is called once per frame

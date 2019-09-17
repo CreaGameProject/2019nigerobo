@@ -11,7 +11,6 @@ public class CSVReader : MonoBehaviour
     //[SerializeField] GameObject notDelete;
     [SerializeField] TextAsset csvFile;
     //public static int namecount;//LISTの番号指定
-    public string csvName;
     private Vector2Int mapRange;
     public CSVReader(Vector2Int len)
     {
