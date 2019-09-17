@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class EnemiesGenerator : MonoBehaviour
 {
-    public int enemyNum = 10;
+    public int enemyNum = 1;
     public Vector2Int mapRange=new Vector2Int(50,50);
     private bool[,] maps;
     private List<Vector2Int> enemiesPosition = new List<Vector2Int>();
@@ -17,7 +17,7 @@ public class EnemiesGenerator : MonoBehaviour
         System.Random r = new System.Random();
         GameObject enemyObj = (GameObject) Resources.Load("Prefabs/enemy_jam_master");
         maps = csvreader.LoadMap(mapRange);
-        while (enemiesPosition.Count <= enemyNum)
+        while (enemiesPosition.Count < enemyNum)
         {
             Vector2Int tmp = new Vector2Int(r.Next(mapRange.x), r.Next(mapRange.y));
             
@@ -29,7 +29,9 @@ public class EnemiesGenerator : MonoBehaviour
         }
     }
 
-    //summery 配列に重複がある場合falseをリターン
+    ///<summary> 配列に重複がある場合falseをリターン</summary>
+    /// <param name="a">検査されるリスト</param>
+    /// <param name="b">検査する要素</param>
     private bool IsDuplicate(List<Vector2Int> a,Vector2Int b)
     {
         foreach (var VARIABLE in a)

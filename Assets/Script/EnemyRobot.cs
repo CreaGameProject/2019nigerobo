@@ -14,6 +14,7 @@ public class EnemyRobot : MonoBehaviour
     private Animator animator;
     private Warning warning;
     private MoveSceneScript moveSceneScript;
+    private BGMScript bgmScript;
 
     /// <summary> マップの範囲 </summary>
     [SerializeField] private Vector2Int mapRange;
@@ -95,7 +96,7 @@ public class EnemyRobot : MonoBehaviour
         _passableMap = csvreader.LoadMap(mapRange);
         _initialPosition = EnemyPosition;
         StartCoroutine(StateManage());
-        BGMScript bgmScript = GameObject.Find("MainCamera").GetComponent<BGMScript>();
+        bgmScript = GameObject.FindWithTag("MainCamera").GetComponent<BGMScript>();
     }
 
     // Update is called once per frame
@@ -106,6 +107,11 @@ public class EnemyRobot : MonoBehaviour
             animator.SetBool(Attack, true);
             GameOver();
         }
+    }
+
+    public void ReStertCoroutine(Vector3 newPos)
+    {
+        StartCoroutine(StateManage());
     }
 
     private void GameOver()
@@ -134,13 +140,14 @@ public class EnemyRobot : MonoBehaviour
     /// <summary> 巡回ステート時の処理 </summary>
     private IEnumerator RandomWalk()
     {
+        //bgmScript.NormalBGM();
         while (!FindPlayer())
         {
             // 距離マップ
             int[,] distanceMap = new int[mapRange.x, mapRange.y];
             // 目的地ランダマイズ
             Vector2Int destination = RandomDestination();
-            Debug.Log("random destination"+destination);
+            //Debug.Log("random destination"+destination);
             // 移動マップ記録
             _influenceMap.DetureMatrixOperate(destination, j => _passableMap[j.x, j.y],
                 (xCount, yCount, distance) => { distanceMap[xCount, yCount] = distance; });
@@ -165,6 +172,7 @@ public class EnemyRobot : MonoBehaviour
     /// <summary> 追跡ステート時の処理 </summary>
     private IEnumerator ChasePlayer()
     {
+        //bgmScript.EmargencyBGM();
         int[,] distanceMap = new int[mapRange.x, mapRange.y];
         do 
         {

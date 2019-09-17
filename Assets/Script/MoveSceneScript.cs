@@ -26,6 +26,6 @@ public class MoveSceneScript : MonoBehaviour
     //ゲームオバーの時
     public void MoveGameOver()
     {
-        SceneManager.LoadScene("Scene2");
+        //SceneManager.LoadScene("Scene2");
     }
 }

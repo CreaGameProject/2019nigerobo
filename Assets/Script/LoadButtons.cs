@@ -28,7 +28,8 @@ public class LoadButtons : MonoBehaviour
         {
             button1.SetActive(CheckPoint.isOne);
             button2.SetActive(CheckPoint.isTwo);
-        }else if (CheckPoint.dethCount<=0)
+        }
+        else if (CheckPoint.dethCount<=0)
         {
             button1.SetActive(false);
             button2.SetActive(false);
@@ -37,6 +38,6 @@ public class LoadButtons : MonoBehaviour
 
     public void OnClick(int gateNum)
     {
-        checkPoint.CPLoad(gateNum);
+        StartCoroutine(checkPoint.CPLoad(gateNum));
     }
 }
