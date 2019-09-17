@@ -18,6 +18,7 @@ public class Gate : MonoBehaviour
     {
         Player = GameObject.FindGameObjectWithTag("Player");
         animator = gameObject.GetComponent<Animator>();
+        checkPoint = Player.GetComponent<CheckPoint>();
     }
 
     // Update is called once per frame

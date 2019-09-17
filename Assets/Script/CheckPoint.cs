@@ -6,17 +6,17 @@ using UnityEngine.UI;
 
 public class CheckPoint : MonoBehaviour
 {
-    static public float[] correntTime=new float[2];
-    static private GameObject[] enemies;
-    static public GameObject robot;
-    static private Vector3 friendlyposition;
-    static private GameObject[] gatePos;
+    public static float[] correntTime=new float[2];
+    private static GameObject[] enemies;
+    public static GameObject robot;
+    private /*static*/ Vector3 friendlyposition;
+    private static GameObject[] gatePos;
     private GameObject[] gate;
-    static public int dethCount = 3;
-    static public bool isOne = false;
-    static public bool isTwo = false;
+    public static int dethCount = 3;
+    public static bool isOne = false;
+    public static bool isTwo = false;
 
-    static public List<List<Vector3>> EnemiesPositionData { get; set; } = new List<List<Vector3>>();
+    public static List<List<Vector3>> EnemiesPositionData { get; set; } = new List<List<Vector3>>();
     //getcomp
     void Start()
     {
@@ -29,7 +29,8 @@ public class CheckPoint : MonoBehaviour
     public void CPSave(int gateNum)
     {
         correntTime[gateNum] = TimerScript.time;
-        friendlyposition = this.transform.position;
+        friendlyposition = transform.position;
+
         Debug.Log(friendlyposition);
 //        for (int i = 0; i < enemies.Length; i++)
 //        {
