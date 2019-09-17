@@ -14,7 +14,6 @@ public class EnemyRobot : MonoBehaviour
     private Animator animator;
     private Warning warning;
     private MoveSceneScript moveSceneScript;
-    private BGMScript bgmScript;
 
     /// <summary> マップの範囲 </summary>
     [SerializeField] private Vector2Int mapRange;
@@ -55,7 +54,7 @@ public class EnemyRobot : MonoBehaviour
     }
 
     /// <summary> playerを見つけたときtrue </summary>
-    private bool FindPlayer()
+    public bool FindPlayer()
     {
         Vector2Int diff = EnemyPosition - PlayerPosition;
         if (diff.x == 0 || diff.y == 0)
@@ -96,7 +95,6 @@ public class EnemyRobot : MonoBehaviour
         _passableMap = csvreader.LoadMap(mapRange);
         _initialPosition = EnemyPosition;
         StartCoroutine(StateManage());
-        bgmScript = GameObject.FindWithTag("MainCamera").GetComponent<BGMScript>();
     }
 
     // Update is called once per frame
@@ -140,7 +138,6 @@ public class EnemyRobot : MonoBehaviour
     /// <summary> 巡回ステート時の処理 </summary>
     private IEnumerator RandomWalk()
     {
-        //bgmScript.NormalBGM();
         while (!FindPlayer())
         {
             // 距離マップ
@@ -172,7 +169,6 @@ public class EnemyRobot : MonoBehaviour
     /// <summary> 追跡ステート時の処理 </summary>
     private IEnumerator ChasePlayer()
     {
-        //bgmScript.EmargencyBGM();
         int[,] distanceMap = new int[mapRange.x, mapRange.y];
         do 
         {
