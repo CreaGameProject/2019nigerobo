@@ -16,15 +16,17 @@ public class CheckPoint : MonoBehaviour
     public static int dethCount = 3;
     public static bool isOne = false;
     public static bool isTwo = false;
+    private EnemyRobot enemyRobot;
 
-    public static List<List<Vector3>> EnemiesPositionData { get; set; } = new List<List<Vector3>>();
+    public static List<Vector3>[] EnemiesPositionData { get; set; } = new List<Vector3>[2];
     //getcomp
     void Start()
     {
-        Debug.Log("1");
-        //enemies = GameObject.Find("enemy_jam_master");
+        enemies = GameObject.FindGameObjectsWithTag("Enemy");
         correntTime[0] = 300;
         correntTime[1] = 300;
+        EnemiesPositionData[0]=new List<Vector3>();
+        EnemiesPositionData[1]=new List<Vector3>();
     }
     //checkPointでのsave
     public void CPSave(int gateNum)
@@ -32,11 +34,11 @@ public class CheckPoint : MonoBehaviour
         correntTime[gateNum] = TimerScript.time;
         friendlyposition = transform.position;
 
-//        Debug.Log(friendlyposition);
-//        for (int i = 0; i < enemies.Length; i++)
-//        {
-//            EnemiesPositionData[gateNum].Add(enemies[i].transform.position); 
-//        }
+        Debug.Log(friendlyposition);
+        foreach (var t in enemies)
+        {
+            EnemiesPositionData[gateNum].Add(t.transform.position);
+        }
 
         switch (gateNum)
         {
@@ -50,10 +52,8 @@ public class CheckPoint : MonoBehaviour
     }
     
     //任意点でのロード
-    public void CPLoad(int gateNum)
+    public IEnumerator CPLoad(int gateNum)
     {
-        Debug.Log("deth counter" + dethCount + friendlyposition);
-        //FadeOut.Fade();
         Image black_out;
         black_out = GameObject.Find("Black").GetComponent<Image>();
         black_out.color = new Color(0, 0, 0, 256);
@@ -61,10 +61,14 @@ public class CheckPoint : MonoBehaviour
         transform.position = friendlyposition;
         transform.GetComponent<PlayerMove>().controller.enabled = true;
         TimerScript.time = correntTime[gateNum];
-//        for (int i = 0; i < enemies.Length; i++)
-//        {
-//            enemies[i].transform.position = EnemiesPositionData[gateNum][i];
-//        }
+        for (int i = 0; i < enemies.Length; i++)
+        {
+            enemyRobot = enemies[i].GetComponent<EnemyRobot>();
+            enemyRobot.StopAllCoroutines();
+            yield return null;
+            enemies[i].transform.position = EnemiesPositionData[gateNum][i];
+            enemyRobot.ReStertCoroutine(EnemiesPositionData[gateNum][i]);
+        }
         dethCount--;
         if (gateNum==1)
         {

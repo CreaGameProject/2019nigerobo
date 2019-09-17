@@ -26,7 +26,7 @@ public class Gate : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        Debug.Log(animator.GetCurrentAnimatorStateInfo(1).normalizedTime);
+        //Debug.Log(animator.GetCurrentAnimatorStateInfo(1).normalizedTime);
         if(Vector3.Distance(Player.transform.position, transform.position) < 2.0f && !through) //プレイヤーとゲートの距離が2,0以下のとき
         {
             animator.Play("Armature|ArmatureAction"); //アニメーションの再生

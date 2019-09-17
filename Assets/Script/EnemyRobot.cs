@@ -54,7 +54,7 @@ public class EnemyRobot : MonoBehaviour
     }
 
     /// <summary> playerを見つけたときtrue </summary>
-    private bool FindPlayer()
+    public bool FindPlayer()
     {
         Vector2Int diff = EnemyPosition - PlayerPosition;
         if (diff.x == 0 || diff.y == 0)
@@ -107,6 +107,11 @@ public class EnemyRobot : MonoBehaviour
         }
     }
 
+    public void ReStertCoroutine(Vector3 newPos)
+    {
+        StartCoroutine(StateManage());
+    }
+
     private void GameOver()
     {
         moveSceneScript.MoveGameOver();
@@ -139,7 +144,7 @@ public class EnemyRobot : MonoBehaviour
             int[,] distanceMap = new int[mapRange.x, mapRange.y];
             // 目的地ランダマイズ
             Vector2Int destination = RandomDestination();
-            Debug.Log("random destination"+destination);
+            //Debug.Log("random destination"+destination);
             // 移動マップ記録
             _influenceMap.DetureMatrixOperate(destination, j => _passableMap[j.x, j.y],
                 (xCount, yCount, distance) => { distanceMap[xCount, yCount] = distance; });

@@ -25,14 +25,20 @@ public class BGMScript : MonoBehaviour
     //敵の追跡から逃れたとき
     public void NormalBGM()
     {
-        audioSource.clip = audioClip1;
-        audioSource.Play();
+        if (audioSource.clip != audioClip1)
+        {
+            audioSource.clip = audioClip1;
+            audioSource.Play();
+        }
     }
 
     //敵の視界にプレイヤーが入った時
     public void EmargencyBGM()
     {
-        audioSource.clip = audioClip2;
-        audioSource.Play();
+        if (audioSource.clip != audioClip2)
+        {
+            audioSource.clip = audioClip2;
+            audioSource.Play();
+        }
     }
 }

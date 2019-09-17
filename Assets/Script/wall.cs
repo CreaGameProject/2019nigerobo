@@ -39,7 +39,7 @@ public class wall : MonoBehaviour
         //    z += zIncrease;
 
         //}
-
+        
     }
 
     // Update is called once per frame
