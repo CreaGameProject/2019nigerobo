@@ -22,7 +22,7 @@ public class CheckPoint : MonoBehaviour
     void Start()
     {
         Debug.Log("1");
-        enemies = GameObject.Find("enemy_jam_master");
+        //enemies = GameObject.Find("enemy_jam_master");
         correntTime[0] = 300;
         correntTime[1] = 300;
     }
@@ -32,11 +32,11 @@ public class CheckPoint : MonoBehaviour
         correntTime[gateNum] = TimerScript.time;
         friendlyposition = transform.position;
 
-        Debug.Log(friendlyposition);
-        for (int i = 0; i < enemies.Length; i++)
-        {
-            EnemiesPositionData[gateNum].Add(enemies[i].transform.position); 
-        }
+//        Debug.Log(friendlyposition);
+//        for (int i = 0; i < enemies.Length; i++)
+//        {
+//            EnemiesPositionData[gateNum].Add(enemies[i].transform.position); 
+//        }
 
         switch (gateNum)
         {
@@ -61,10 +61,10 @@ public class CheckPoint : MonoBehaviour
         transform.position = friendlyposition;
         transform.GetComponent<PlayerMove>().controller.enabled = true;
         TimerScript.time = correntTime[gateNum];
-        for (int i = 0; i < enemies.Length; i++)
-        {
-            enemies[i].transform.position = EnemiesPositionData[gateNum][i];
-        }
+//        for (int i = 0; i < enemies.Length; i++)
+//        {
+//            enemies[i].transform.position = EnemiesPositionData[gateNum][i];
+//        }
         dethCount--;
         if (gateNum==1)
         {
