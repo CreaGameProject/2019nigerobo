@@ -52,7 +52,9 @@ public class CheckPoint : MonoBehaviour
     public void CPLoad(int gateNum)
     {
         Debug.Log("deth counter" + dethCount);
-        FadeOut.Fade();
+        //FadeOut.Fade();
+        black_out = GameObject.Find("Black").GetComponent<Image>();
+        black_out.color = new Color(0, 0, 0, 256);
         this.transform.position = friendlyposition;
         Debug.Log(robot.transform.position);
         TimerScript.time = correntTime[gateNum];
@@ -65,8 +67,7 @@ public class CheckPoint : MonoBehaviour
         {
             isTwo=false;
         }
-        FadeOut.FadeIn();
+        //FadeOut.FadeIn();
+        black_out.color = new Color(0, 0, 0, 0);
     }
-    
-    
 }
