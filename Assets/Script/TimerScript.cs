@@ -9,15 +9,17 @@ public class TimerScript : MonoBehaviour
     //制限時間（分）
     private int minute;
     //制限時間（秒）
-    private float seconds;
+    private int seconds;
     //前回Updata時の秒数
     private float oldSeconds;
-    GameObject timerText;
+    GameObject SecondsText;
+    GameObject MinuteText;
     public static float time = 300;
     // Start is called before the first frame update
     void Start()
     {
-        this.timerText = GameObject.Find("Time");
+        this.SecondsText = GameObject.Find("Seconds");
+        this.MinuteText = GameObject.Find("Minute");
         oldSeconds = 0f;
     }
 
@@ -32,11 +34,13 @@ public class TimerScript : MonoBehaviour
         }
         time -= Time.deltaTime;
         minute = (int)time / 60;
-        seconds = time - minute * 60;
+        seconds = (int)time - minute * 60;
         if ((int)seconds != (int)oldSeconds)
         {
-            this.timerText.GetComponent<Text>().text = minute.ToString("00") + ":" + ((int)seconds).ToString("00");
+            this.SecondsText.GetComponent<Text>().text = seconds.ToString("00") ;
+            this.MinuteText.GetComponent<Text>().text = minute.ToString("00");
         }
+
         oldSeconds = seconds;
     }
 
