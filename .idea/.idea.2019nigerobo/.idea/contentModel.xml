@@ -34,7 +34,6 @@
           <e p="PlayerMove.cs" t="Include" />
           <e p="readerCsv.cs" t="Include" />
           <e p="TimerScript.cs" t="Include" />
-          <e p="TimerScript2.cs" t="Include" />
           <e p="Title.cs" t="Include" />
           <e p="wall.cs" t="Include" />
           <e p="Warning.cs" t="Include" />
