@@ -9,7 +9,7 @@ public class TimerScript : MonoBehaviour
     //制限時間（分）
     private int minute;
     //制限時間（秒）
-    private float seconds;
+    private int seconds;
     //前回Updata時の秒数
     private float oldSeconds;
     GameObject SecondsText;
@@ -34,10 +34,10 @@ public class TimerScript : MonoBehaviour
         }
         time -= Time.deltaTime;
         minute = (int)time / 60;
-        seconds = time - minute * 60;
+        seconds = (int)time - minute * 60;
         if ((int)seconds != (int)oldSeconds)
         {
-            this.SecondsText.GetComponent<Text>().text = seconds.ToString("00");
+            this.SecondsText.GetComponent<Text>().text = seconds.ToString("00") ;
             this.MinuteText.GetComponent<Text>().text = minute.ToString("00");
         }
 
