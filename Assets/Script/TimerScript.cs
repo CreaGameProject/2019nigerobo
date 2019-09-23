@@ -15,6 +15,7 @@ public class TimerScript : MonoBehaviour
     GameObject SecondsText;
     GameObject MinuteText;
     public static float time = 300;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -34,10 +35,10 @@ public class TimerScript : MonoBehaviour
         }
         time -= Time.deltaTime;
         minute = (int)time / 60;
-        seconds = time - minute * 60;
+        seconds = (time - (minute * 60)) % 60;
         if ((int)seconds != (int)oldSeconds)
-        {
-            this.SecondsText.GetComponent<Text>().text = seconds.ToString("00") ;
+        { 
+            this.SecondsText.GetComponent<Text>().text = seconds.ToString("00");
             this.MinuteText.GetComponent<Text>().text = minute.ToString("00");
         }
 

@@ -17,11 +17,6 @@ public class BGMScript : MonoBehaviour
         audioSource.Play();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
     //敵の追跡から逃れたとき
     public void NormalBGM()
     {
