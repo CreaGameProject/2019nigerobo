@@ -8,11 +8,12 @@ public class Warning : MonoBehaviour
     public float interval = 0.25f;
     private bool warn=false;
     private bool warnin = false;
+    private BGMScript bgmScript;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        bgmScript = GameObject.FindWithTag("MainCamera").GetComponent<BGMScript>();
     }
 
     // Update is called once per frame

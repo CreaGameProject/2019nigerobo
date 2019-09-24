@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -9,12 +10,19 @@ public class BGMScript : MonoBehaviour
     //敵に見つかった時のBGM
     public AudioClip audioClip2;
     private AudioSource audioSource;
+    
+    // 敵のコンポ
+    private List<EnemyRobot> robots = new List<EnemyRobot>();
+    
     // Start is called before the first frame update
     void Start()
     {
         audioSource = gameObject.GetComponent<AudioSource>();
         audioSource.clip = audioClip1;
         audioSource.Play();
+
+        // コンポをリストに追加
+        foreach (var enemy in GameObject.FindGameObjectsWithTag("Enemy")) robots.Add(enemy.GetComponent<EnemyRobot>());
     }
 
     //敵の追跡から逃れたとき
@@ -35,5 +43,15 @@ public class BGMScript : MonoBehaviour
             audioSource.clip = audioClip2;
             audioSource.Play();
         }
+    }
+
+    private void Update()
+    {
+        bool isChase = false;
+        foreach (var robot in robots) isChase = isChase || (robot.state == EnemyState.Chase);
+        if(isChase)
+            EmargencyBGM();
+        else
+            NormalBGM();
     }
 }

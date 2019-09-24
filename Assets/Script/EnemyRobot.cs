@@ -4,6 +4,11 @@ using UnityEditor.Animations;
 using UnityEngine;
 using UnityEngine.Serialization;
 
+public enum EnemyState
+{
+    Patrol, Chase
+}
+
 public class EnemyRobot : MonoBehaviour
 {
     [SerializeField] private Vector2Int moveRangeRadius;
@@ -27,6 +32,9 @@ public class EnemyRobot : MonoBehaviour
     /// <summary> 巡回中心座標 </summary>
     private Vector2Int _initialPosition;
 
+    /// <summary> 現在のステート </summary>
+    public EnemyState state;
+
     /// <summary> 二次元整数座標で敵ロボットのtransformのpositionにアクセスする </summary>
     private Vector2Int EnemyPosition
     {
@@ -37,7 +45,7 @@ public class EnemyRobot : MonoBehaviour
             int y = Mathf.RoundToInt(position.z);
             return new Vector2Int(x, y);
         }
-        set => transform.position = new Vector3(value.x, transform.position.y, value.y);
+        set { transform.position = new Vector3(value.x, transform.position.y, value.y); }
     }
 
     /// <summary> 二次元整数座標でプレイヤーのtransformのpositionにアクセスする </summary>
@@ -50,7 +58,7 @@ public class EnemyRobot : MonoBehaviour
             int y = Mathf.RoundToInt(position.z);
             return new Vector2Int(x, y);
         }
-        set => playerTransform.position = new Vector3(value.x, transform.position.y, value.y);
+        set { playerTransform.position = new Vector3(value.x, transform.position.y, value.y); }
     }
 
     /// <summary> playerを見つけたときtrue </summary>
@@ -71,7 +79,7 @@ public class EnemyRobot : MonoBehaviour
     }
 
     /// <summary> true:追跡ステート false:巡回ステート </summary>
-    private bool IsChase =>
+    public bool IsChase =>
         Mathf.Abs(PlayerPosition.x - _initialPosition.x) <= moveRangeRadius.x &&
         Mathf.Abs(PlayerPosition.y - _initialPosition.y) <= moveRangeRadius.y;
 
@@ -92,6 +100,7 @@ public class EnemyRobot : MonoBehaviour
         moveSceneScript = GameObject.FindWithTag("MainCamera").GetComponent<MoveSceneScript>();
         warning = GameObject.FindWithTag("MainCamera").GetComponent<Warning>();
         playerTransform = GameObject.FindWithTag("Player").GetComponent<Transform>();
+        
         _passableMap = csvreader.LoadMap(mapRange);
         _initialPosition = EnemyPosition;
         StartCoroutine(StateManage());
@@ -125,12 +134,14 @@ public class EnemyRobot : MonoBehaviour
             // 巡回する プレイヤーを見つけるまで
             Debug.Log("Patrol Phase");
             animator.SetBool(Stalking, false);
+            state = EnemyState.Patrol;
             yield return RandomWalk();
 
             // プレイヤーを追いかける
             Debug.Log("Chase Phase");
             animator.SetBool(Stalking, true);
             warning.Warn();
+            state = EnemyState.Chase;
             yield return ChasePlayer();
         }
     }
@@ -186,7 +197,7 @@ public class EnemyRobot : MonoBehaviour
                 }
             });
             yield return Move(stepPos - EnemyPosition, runTime);
-        } while (IsChase);
+        } while (IsChase || FindPlayer());
     }
 
     /// <summary> 1マス移動 </summary>

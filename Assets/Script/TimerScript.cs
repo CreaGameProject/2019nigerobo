@@ -22,28 +22,42 @@ public class TimerScript : MonoBehaviour
         this.SecondsText = GameObject.Find("Seconds");
         this.MinuteText = GameObject.Find("Minute");
         oldSeconds = 0f;
+        StartCoroutine(GameTimer());
     }
 
     // Update is called once per frame
-    void Update()
+//    void Update()
+//    {
+//        //制限時間が0秒以下の時
+//        if (time <= 0f)
+//        {
+//            this.gameManager.GetComponent<MoveSceneScript>().MoveGameOver();
+//            return;
+//        }
+//        time -= Time.deltaTime;
+//        minute = (int)time / 60;
+//        seconds = (time - (minute * 60)) % 60;
+//        if ((int)seconds != (int)oldSeconds)
+//        { 
+//            this.SecondsText.GetComponent<Text>().text = seconds.ToString("00");
+//            this.MinuteText.GetComponent<Text>().text = minute.ToString("00");
+//        }
+//
+//        oldSeconds = seconds;
+//    }
+
+    private IEnumerator GameTimer()
     {
-        //制限時間が0秒以下の時
-        if (time <= 0f)
+        yield return null;
+        int LocalTime = (int)time;
+        while (LocalTime > 0)
         {
-            this.gameManager.GetComponent<MoveSceneScript>().MoveGameOver();
-            return;
+            LocalTime--;
+            this.SecondsText.GetComponent<Text>().text = (LocalTime % 60).ToString("00");
+            this.MinuteText.GetComponent<Text>().text = (LocalTime / 60).ToString("00");
+            yield return new WaitForSeconds(1f);
         }
-        time -= Time.deltaTime;
-        minute = (int)time / 60;
-        seconds = (time - (minute * 60)) % 60;
-        if ((int)seconds != (int)oldSeconds)
-        { 
-            this.SecondsText.GetComponent<Text>().text = seconds.ToString("00");
-            this.MinuteText.GetComponent<Text>().text = minute.ToString("00");
-        }
-
-        oldSeconds = seconds;
+        this.gameManager.GetComponent<MoveSceneScript>().MoveGameOver();
     }
-
     
 }
