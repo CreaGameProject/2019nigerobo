@@ -2361,8 +2361,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e04fd66cc52cd34cb7dce1b5726ebac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyNum: 10
+  enemyNum: 20
   mapRange: {x: 50, y: 50}
+  createPosition: []
 --- !u!114 &963194236
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3127,6 +3128,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8628bcf9f335454f8c3921663dfd988, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  csvFile: {fileID: 4900000, guid: 854355d822e209b4a932c797304eafed, type: 3}
+  createEnemyPosition: []
 --- !u!4 &1641743492
 Transform:
   m_ObjectHideFlags: 0
