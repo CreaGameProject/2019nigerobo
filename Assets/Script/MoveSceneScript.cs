@@ -20,12 +20,13 @@ public class MoveSceneScript : MonoBehaviour
     //ゲームクリアのとき
     public void MoveGameClear()
     {
-        SceneManager.LoadScene("Scene1");
+        Debug.Log("clear");
+        SceneManager.LoadScene("GameClearScene");
     }
 
     //ゲームオバーの時
     public void MoveGameOver()
     {
-        //SceneManager.LoadScene("Scene2");
+        SceneManager.LoadScene("GameOverScene");
     }
 }

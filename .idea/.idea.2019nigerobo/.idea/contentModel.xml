@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\kinok\.Rider2019.1\system\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\kinok\.Rider2019.1\system\resharper-host\local\Transient\ReSharperHost\v191\SolutionCaches\_2019nigerobo.656466377.00" t="ExcludeRecursive" />
-    <e p="C:\Users\kinok\Documents\2019nigerobo" t="IncludeRecursive">
+    <e p="C:\Users\Lycolet\.Rider2019.2\config\scratches" t="IncludeRecursive" />
+    <e p="C:\Users\Lycolet\.Rider2019.2\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\Lycolet\.Rider2019.2\system\resharper-host\local\Transient\ReSharperHost\v192\SolutionCaches\_2019nigerobo.-383946898.00" t="ExcludeRecursive" />
+    <e p="C:\Users\Lycolet\Documents\GitHub\2019nigerobo" t="IncludeRecursive">
       <e p="2019nigerobo.sln" t="IncludeFlat" />
       <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
+        <e p="ClearCollider.cs" t="Include" />
         <e p="MasterCube" t="Include">
           <e p="Editor" t="Include">
             <e p="CombineMeshEditor.cs" t="Include" />
@@ -25,6 +27,7 @@
           <e p="CheckPoint.cs" t="Include" />
           <e p="CheckPointManager.cs" t="Include" />
           <e p="CSVReader.cs" t="Include" />
+          <e p="EndEnemyScript.cs" t="Include" />
           <e p="EnemiesGenerator.cs" t="Include" />
           <e p="EnemyRobot.cs" t="Include" />
           <e p="Gate.cs" t="Include" />
