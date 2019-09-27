@@ -25,20 +25,36 @@ public class Gate : MonoBehaviour
     void FixedUpdate()
     {
         //Debug.Log(animator.GetCurrentAnimatorStateInfo(1).normalizedTime);
-        if(Vector3.Distance(Player.transform.position, transform.position) < 2.0f) //プレイヤーとゲートの距離が2,0以下のとき
-        {
-            animator.SetTrigger("Open_Trigger"); //開くアニメーションの再生
-        }
-        else
-        {
-            animator.SetTrigger("Close_Trigger"); //閉じるアニメーションの再生
-        }
+        //if(Vector3.Distance(Player.transform.position, transform.position) < 2.0f) //プレイヤーとゲートの距離が2,0以下のとき
+        //{
+        //    animator.SetTrigger("Open_Trigger"); //開くアニメーションの再生
+        //}
+        //else
+        //{
+        //    animator.SetTrigger("Close_Trigger"); //閉じるアニメーションの再生
+        //}
 
-        if(Vector3.Distance(Player.transform.position, transform.position) < 0.5f && !through) //プレイヤーとゲートの距離が0.5以下でかつ、一度もそのゲートを通っていないとき
+        if (Vector3.Distance(Player.transform.position, transform.position) < 0.5f && !through) //プレイヤーとゲートの距離が0.5以下でかつ、一度もそのゲートを通っていないとき
         {
             through = true; //すでにゲートを通ったことにする
             checkPoint.CPSave(gate_num); //CPSaveにゲート番号を渡す
-            
+
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Player") )
+        {
+            animator.SetTrigger("Open_Trigger"); //開くアニメーションの再生
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            animator.SetTrigger("Close_Trigger"); //開くアニメーションの再生
         }
     }
 }
