@@ -11,6 +11,7 @@ public enum EnemyState
 
 public class EnemyRobot : MonoBehaviour
 {
+
     [SerializeField] private Vector2Int moveRangeRadius;
     [SerializeField] private float walkTime;
     [SerializeField] private float runTime;
@@ -19,6 +20,7 @@ public class EnemyRobot : MonoBehaviour
     private Animator animator;
     private Warning warning;
     private MoveSceneScript moveSceneScript;
+    private EnemiesGenerator enemiesGenerator;
 
     /// <summary> マップの範囲 </summary>
     [SerializeField] private Vector2Int mapRange;
@@ -34,6 +36,12 @@ public class EnemyRobot : MonoBehaviour
 
     /// <summary> 現在のステート </summary>
     public EnemyState state;
+
+    //moeRangeRadius変える
+    private void changeMoveRange(Vector2Int actionDate)
+    {
+        moveRangeRadius = actionDate;
+    }
 
     /// <summary> 二次元整数座標で敵ロボットのtransformのpositionにアクセスする </summary>
     private Vector2Int EnemyPosition
@@ -100,10 +108,13 @@ public class EnemyRobot : MonoBehaviour
         moveSceneScript = GameObject.FindWithTag("MainCamera").GetComponent<MoveSceneScript>();
         warning = GameObject.FindWithTag("MainCamera").GetComponent<Warning>();
         playerTransform = GameObject.FindWithTag("Player").GetComponent<Transform>();
-        
+        enemiesGenerator = GameObject.FindWithTag("MainCamera").GetComponent<EnemiesGenerator>();
+
         _passableMap = csvreader.LoadMap(mapRange);
         _initialPosition = EnemyPosition;
         StartCoroutine(StateManage());
+        changeMoveRange(enemiesGenerator.distributeActionRange());
+
     }
 
     // Update is called once per frame

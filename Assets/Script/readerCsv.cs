@@ -5,10 +5,16 @@ using System.IO;
 
 public class readerCsv : MonoBehaviour
 {
+    //[System.Serializable]
+    //public class InitializeEnemy
+    //{
+    //    public 
+    //}
     [SerializeField]TextAsset csvFile;
     List<string[]> csvDates = new List<string[]>();
     //
     public List<Vector2Int> createEnemyPosition = new List<Vector2Int>();
+
 
     // Start is called before the first frame update
     void Awake()

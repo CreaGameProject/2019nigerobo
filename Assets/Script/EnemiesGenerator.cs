@@ -14,8 +14,16 @@ public class EnemiesGenerator : MonoBehaviour
     //enemy生成座標
     public List<Vector2Int> createPosition;
     private int createdNum = 0;
+    [SerializeField] List<Vector2Int> actionRange;
+    private int distributeNum = 0;
+
+    public Vector2Int distributeActionRange()
+    {
+        distributeNum++;
+        return actionRange[distributeNum - 1];
+    }
     //
-    
+
     public void Start()
     {
        
@@ -25,6 +33,7 @@ public class EnemiesGenerator : MonoBehaviour
         maps = csvreader.LoadMap(mapRange);
 
         //
+        //GameObject enemyObject;
         createPosition = GameObject.Find("wallManager").GetComponent<readerCsv>().createEnemyPosition;
         
         while (enemiesPosition.Count < enemyNum)
@@ -44,6 +53,8 @@ public class EnemiesGenerator : MonoBehaviour
            
         }
     }
+
+    
 
     ///<summary> 配列に重複がある場合falseをリターン</summary>
     /// <param name="a">検査されるリスト</param>

@@ -2363,7 +2363,48 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyNum: 20
   mapRange: {x: 50, y: 50}
-  createPosition: []
+  createPosition:
+  - {x: 45, y: 45}
+  - {x: 38, y: 45}
+  - {x: 31, y: 40}
+  - {x: 24, y: 38}
+  - {x: 23, y: 36}
+  - {x: 41, y: 35}
+  - {x: 44, y: 34}
+  - {x: 37, y: 33}
+  - {x: 20, y: 32}
+  - {x: 29, y: 31}
+  - {x: 37, y: 27}
+  - {x: 28, y: 22}
+  - {x: 5, y: 17}
+  - {x: 29, y: 15}
+  - {x: 22, y: 15}
+  - {x: 31, y: 12}
+  - {x: 41, y: 7}
+  - {x: 3, y: 6}
+  - {x: 19, y: 5}
+  - {x: 11, y: 3}
+  actionRange:
+  - {x: 2, y: 2}
+  - {x: 3, y: 3}
+  - {x: 3, y: 2}
+  - {x: 3, y: 1}
+  - {x: 3, y: 3}
+  - {x: 2, y: 4}
+  - {x: 1, y: 3}
+  - {x: 2, y: 2}
+  - {x: 2, y: 3}
+  - {x: 2, y: 2}
+  - {x: 2, y: 2}
+  - {x: 3, y: 2}
+  - {x: 3, y: 2}
+  - {x: 2, y: 3}
+  - {x: 3, y: 3}
+  - {x: 3, y: 3}
+  - {x: 5, y: 5}
+  - {x: 2, y: 3}
+  - {x: 4, y: 2}
+  - {x: 2, y: 3}
 --- !u!114 &963194236
 MonoBehaviour:
   m_ObjectHideFlags: 0
