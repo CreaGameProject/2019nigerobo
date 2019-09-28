@@ -7,12 +7,20 @@
     <list default="true" id="0d77ea3a-fe44-4a7d-975b-816b5d78e94d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.2019nigerobo/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.2019nigerobo/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.2019nigerobo/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.2019nigerobo/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/enemy_jam_master.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/enemy_jam_master.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Field.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Field.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Title.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Title.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/MoveSceneScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/MoveSceneScript.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameClearScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GameClearScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameOverScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GameOverScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/BGMScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/BGMScript.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/CameraManagement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/CameraManagement.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/EnemiesGenerator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/EnemiesGenerator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/EnemyRobot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/EnemyRobot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/LoadButtons.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/LoadButtons.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Script/Title.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Title.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/gateopen.unitypackage.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/UnityConnectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/UnityConnectSettings.asset" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -51,6 +59,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Script/Title.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Script/CSVReader.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Script/BGMScript.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Script/ToTitle.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Script/LoadButtons.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Script/PlayerMove.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Script/MoveSceneScript.cs" root0="FORCE_HIGHLIGHTING" />
@@ -58,6 +67,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Script/readerCsv.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/ClearCollider.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Script/Gate.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Script/CameraManagement.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Script/EnemiesGenerator.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Script/Warning.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Script/wall.cs" root0="FORCE_HIGHLIGHTING" />
@@ -72,16 +82,18 @@
         <option value="$PROJECT_DIR$/Assets/Script/CSVReader.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/wall.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/Warning.cs" />
-        <option value="$PROJECT_DIR$/Assets/Script/EnemiesGenerator.cs" />
-        <option value="$PROJECT_DIR$/Assets/Script/EnemyRobot.cs" />
-        <option value="$PROJECT_DIR$/Assets/Script/LoadButtons.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/TimerScript.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/CheckPoint.cs" />
-        <option value="$PROJECT_DIR$/Assets/Script/BGMScript.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/Gate.cs" />
-        <option value="$PROJECT_DIR$/Assets/Script/Title.cs" />
         <option value="$PROJECT_DIR$/Assets/ClearCollider.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/MoveSceneScript.cs" />
+        <option value="$PROJECT_DIR$/Assets/Script/CameraManagement.cs" />
+        <option value="$PROJECT_DIR$/Assets/Script/LoadButtons.cs" />
+        <option value="$PROJECT_DIR$/Assets/Script/EnemyRobot.cs" />
+        <option value="$PROJECT_DIR$/Assets/Script/EnemiesGenerator.cs" />
+        <option value="$PROJECT_DIR$/Assets/Script/BGMScript.cs" />
+        <option value="$PROJECT_DIR$/Assets/Script/ToTitle.cs" />
+        <option value="$PROJECT_DIR$/Assets/Script/Title.cs" />
       </list>
     </option>
   </component>

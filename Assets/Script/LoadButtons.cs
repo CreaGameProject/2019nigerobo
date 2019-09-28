@@ -45,19 +45,19 @@ public class LoadButtons : MonoBehaviour
             button2.SetActive(false);
         }
 
-        isChase = new bool[enemyNum];
-        for (int i = 0; i < enemyNum; i++)
-        {
-            if (isChase[i] = enemyRobot[i].FindPlayer())
-            {
-                bgmScript.EmargencyBGM();
-            }
-        }
-
-        if (isChase.Distinct().Count()==1)
-        {
-            bgmScript.NormalBGM();
-        }
+//        isChase = new bool[enemyNum];
+//        for (int i = 0; i < enemyNum; i++)
+//        {
+//            if (isChase[i] = enemyRobot[i].FindPlayer())
+//            {
+//                bgmScript.EmargencyBGM();
+//            }
+//        }
+//
+//        if (isChase.Distinct().Count()==1)
+//        {
+//            bgmScript.NormalBGM();
+//        }
     }
 
     public void OnClick(int gateNum)

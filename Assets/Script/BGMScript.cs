@@ -20,9 +20,16 @@ public class BGMScript : MonoBehaviour
         audioSource = gameObject.GetComponent<AudioSource>();
         audioSource.clip = audioClip1;
         audioSource.Play();
+        StartCoroutine(EnemyAdd());
+    }
 
+    IEnumerator EnemyAdd()
+    {
+        yield return null;
         // コンポをリストに追加
         foreach (var enemy in GameObject.FindGameObjectsWithTag("Enemy")) robots.Add(enemy.GetComponent<EnemyRobot>());
+        Debug.Log(robots.Count);
+        yield break;
     }
 
     //敵の追跡から逃れたとき

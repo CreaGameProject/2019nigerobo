@@ -806,10 +806,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveRangeRadius: {x: 10, y: 10}
   walkTime: 1
-  runTime: 0.4
+  runTime: 0.75
   curveTime: 0
   mapRange: {x: 50, y: 50}
   edgeLength: 1
+  state: 0
 --- !u!1 &1349267593226510293
 GameObject:
   m_ObjectHideFlags: 0

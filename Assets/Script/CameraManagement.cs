@@ -32,7 +32,7 @@ public class CameraManagement : MonoBehaviour
 
         float mouseInputX = Input.GetAxis("Mouse X");
 
-        transform.RotateAround(targetPos, Vector3.up, mouseInputX * Time.deltaTime * 200f);
+        transform.RotateAround(targetPos, Vector3.up, mouseInputX * Time.deltaTime * 100f);
 
 
         Vector3 differnce = (targetPlayer.transform.position - this.transform.position);
